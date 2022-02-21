@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void)
+{
+    /* Create a char variable and initialize it to 100 */
+    char data = 100;
+    /* Print the address of the above variable */
+    
+    printf("Address of the variable is: %p\n", &data);
+    //Print variable data
+    printf("Value of data is: %d\n", data);
+    //Create a pointer variable and store the address of the above variable
+    char* pAddress = &data;
+    //Perform read operation on the pointer variable to fetch 1 byte of data from the pointer
+    char value = *pAddress;
+    //Print the data obtained from the read operation on the pointer
+    printf("Read value is: %d", value);
+    //Perform write operation on the pointer to store the value 65
+    *pAddress = 65;
+    //Print the value of the variable defined in step 100
+    printf("\nValue of variable data is: %d", data);
+    return 0;
+}
